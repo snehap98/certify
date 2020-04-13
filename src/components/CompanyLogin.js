@@ -26,13 +26,13 @@ class CompanyLogin extends Component {
             <div className="back">
                   <div className="sidebar">
                     <ul>
-                        <li><a className="nav-link px-3">
+                        <li><a className="nav-link px-3" href="#prof">
                             <i className="material-icons icon">
                               person
                             </i>
-                            <span className="text">User Profile</span>
+                            <span className="text">Profile</span>
                           </a></li>
-                        <li><a className="nav-link px-3">
+                        <li><a className="nav-link px-3" href="#view_cert">
                             <i className="material-icons icon">
                               pageview
                             </i>
@@ -47,13 +47,15 @@ class CompanyLogin extends Component {
                     </ul>
                 </div>
 
+
                 <div className="container-fluid mt-5">
-                    <div className="row">
+                    <div className="row" id="prof">
                         <main role="main" className="col-lg-50 d-flex text-center">
 
                             <div className="content mr-auto ml-auto"><center>
-                                <h1><center>Profile</center></h1>
-                                <div>
+                                <h1><center>Company Profile</center></h1>
+                                <br/>
+                                <div className="fa">
                                   <form name="a">
                                     <div>
                                       Name: <label>{this.props.name}</label>
@@ -68,13 +70,14 @@ class CompanyLogin extends Component {
                                     </div>
                                   </form>
                                 </div>
+                                <br/>
                               </center>
                             </div>
                         </main>
                       </div>
+                      <hr/>
 
-
-                      <div className="row">
+                      <div className="row" id="view_cert">
                         <main role="main" className="col-lg-100">
                             <div id="content"><center>
                                 <h1><center>View Certificate</center></h1>
@@ -98,6 +101,7 @@ class CompanyLogin extends Component {
                                      })}
                                     </ul>
                                 </div>
+                                <br/>
                                 </center>
                             </div>
 

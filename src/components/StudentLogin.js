@@ -66,13 +66,19 @@ class StudentLogin extends Component {
         <div className="back">
               <div className="sidebar">
                 <ul>
-                    <li><a className="nav-link px-3">
+                    <li><a className="nav-link px-3" href="#prof">
                         <i className="material-icons icon">
                           person
                         </i>
-                        <span className="text">User Profile</span>
+                        <span className="text">Profile</span>
                       </a></li>
-                    <li><a className="nav-link px-3">
+                      <li><a className="nav-link px-3" href="#certs">
+                          <i className="material-icons icon">
+                            assignment
+                          </i>
+                          <span className="text">My Certificate</span>
+                        </a></li>
+                    <li><a className="nav-link px-3" href="#send_certs">
                         <i className="material-icons icon">
                           send
                         </i>
@@ -88,12 +94,13 @@ class StudentLogin extends Component {
             </div>
 
             <div className="container-fluid mt-5">
-                <div className="row">
+                <div className="row" id="prof">
                     <main role="main" className="col-lg-50 d-flex text-center">
 
                         <div className="content mr-auto ml-auto"><center>
-                            <h1><center>Profile</center></h1>
-                            <div>
+                            <h1><center>Student Profile</center></h1>
+                            <br/>
+                            <div className="fa">
                                   <form name="a">
                                   <div>
                                     Name: <label>{this.props.name}</label>
@@ -108,35 +115,16 @@ class StudentLogin extends Component {
                                   </div>
                                   </form>
                             </div>
+                            <br/>
                             </center>
                         </div>
                     </main>
                   </div>
 
-
-                  <div className="row">
-                    <main role="main" className="col-lg-100">
-                        <div id="content"><center>
-                            <h1><center>Send Certificate</center></h1>
-                            <div>
-                                <br/>
-                                <form name="b">
-                                    <div>
-                                        Company UID<input type="text" name="cid" className="form-b" onChange={this.handleChange.bind(this)}  required/>
-                                    </div>
-                                    <br/>
-                                    <div>
-                                        <center><button id="snd" type="submit" onClick={this.sendCert.bind(this)}>Send Certificate</button></center>
-                                    </div>
-                                </form>
-                            </div>
-                          </center>
-                        </div>
-                    </main>
-                </div>
+                  <hr/>
 
 
-                <div className="row">
+                <div className="row" id="certs">
                   <main role="main" className="col-lg-100">
                       <div id="content"><center>
                         <h1><center>My Certificates</center></h1>
@@ -160,10 +148,34 @@ class StudentLogin extends Component {
                                })}
                               </ul>
                           </div>
+                          <br/>
                         </center>
                     </div>
                  </main>
            </div>
+           <br/>
+           <hr/>
+           <div className="row" id="send_certs">
+             <main role="main" className="col-lg-100">
+                 <div id="content"><center>
+                     <h1><center>Send Certificate</center></h1>
+                     <div>
+                         <br/>
+                         <form name="a">
+                             <div>
+                                 Company UID<input type="text" name="cid" className="form-b" onChange={this.handleChange.bind(this)}  required/>
+                             </div>
+                             <br/>
+                             <div>
+                                 <center><button id="snd" type="submit" onClick={this.sendCert.bind(this)}>Send Certificate</button></center>
+                             </div>
+                         </form>
+                     </div>
+                   </center>
+                 </div>
+             </main>
+       </div>
+
         </div>
       </div>
     );

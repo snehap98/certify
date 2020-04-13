@@ -100,7 +100,7 @@ return (
                   <i className="material-icons icon">
                     person
                   </i>
-                  <span className="text">User Profile</span>
+                  <span className="text">Profile</span>
                 </a></li>
               <li><a className="nav-link px-3" href= "#upload-cert">
                   <i className="material-icons icon">
@@ -110,7 +110,7 @@ return (
                 </a></li>
                 <li><a className="nav-link px-3" href= "#uploaded">
                     <i className="material-icons icon">
-                      publish
+                      description
                     </i>
                     <span className="text">Uploaded Certificate</span>
                   </a></li>
@@ -128,8 +128,9 @@ return (
               <main role="main" className="col-lg-50 d-flex text-center">
 
                   <div className="content mr-auto ml-auto"><center>
-                      <h1><center>Profile</center></h1>
-                      <div>
+                      <h1><center>University Profile</center></h1>
+                      <br/>
+                      <div className="fa">
                             <form name="a">
                             <div>
                                 Name: <label>{this.props.name}</label>
@@ -144,6 +145,7 @@ return (
                             </div>
                             </form>
                       </div>
+                      <br/>
                       </center>
                   </div>
               </main>
@@ -154,9 +156,9 @@ return (
               <main role="main" className="col-lg-100">
                   <div id="content"><center>
                       <h1><center>Upload Certificate</center></h1>
-                      <div>
+                      <div >
                           <br/>
-                          <form name="b" >
+                          <form name="a" >
                               <div>
                                   Student UID  <input type="text" name= "nuid" className="form-b" onChange={this.handleChange.bind(this)}  required/>
                               </div>
@@ -171,6 +173,7 @@ return (
                           </form>
 
                       </div>
+                      <br/>
                       </center>
                   </div>
 

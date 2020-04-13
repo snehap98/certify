@@ -139,6 +139,7 @@ import CompanyLogin from "./CompanyLogin"
                 <div className="content mr-auto ml-auto">
                      <form >
                       <h1 className="tc">Certify</h1>
+                      <div>
                         <br/>
                          <select id="profile"
                          className="profile"
@@ -203,7 +204,7 @@ import CompanyLogin from "./CompanyLogin"
                         <p className="text-center"> Already registered? </p>
                         <center><Button variant="light" id="but" type="submit" className="mr-2" onClick = {this.loginAccount.bind(this)} >Login</Button></center> <br/><br/><br/><br/><br/>
 
-
+                        </div>
                         </div>
                       </main>
                     </div>
